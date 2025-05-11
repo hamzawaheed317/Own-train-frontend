@@ -21,7 +21,7 @@ const ProtectedRoute = ({ element: Element }) => {
     const verifyAuth = async () => {
       try {
         const response = await fetch(
-          `${import.meta.env.REACT_APP_API_URL}/admin/verify-auth`,
+          `https://own-train-backend.vercel.app/admin/verify-auth`,
           {
             credentials: "include",
           }

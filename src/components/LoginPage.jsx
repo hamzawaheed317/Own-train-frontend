@@ -39,7 +39,7 @@ const LoginPage = () => {
     setError("");
 
     try {
-      const response = await fetch(`${import.meta.env.REACT_APP_API_URL}/user/login`, {
+      const response = await fetch(`https://own-train-backend.vercel.app/user/login`, {
         // Changed endpoint
         method: "POST",
         headers: { "Content-Type": "application/json" },

@@ -21,7 +21,7 @@ const FeedbackButtons = ({ responseId }) => {
     console.log("User form session", user);
     try {
       console.log();
-      const response = await fetch(`${import.meta.env.REACT_APP_API_URL}/feedback/post`, {
+      const response = await fetch(`https://own-train-backend.vercel.app/feedback/post`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -83,7 +83,7 @@ const HomePage = () => {
         navigate("/login");
       }
       console.log("USer", user);
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/user/get-response`, {
+      const response = await fetch(`https://own-train-backend.vercel.app/user/get-response`, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -266,7 +266,7 @@ const HomePage = () => {
                       {message.images.map((img, index) => (
                         <div key={index}>
                           <img
-                            src={`${process.env.REACT_APP_API_URL}/uploads/${img.ImageName}`}
+                            src={`https://own-train-backend.vercel.app/uploads/${img.ImageName}`}
                             alt={img.ImageName}
                             style={{
                               width: "200px",

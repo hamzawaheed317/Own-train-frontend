@@ -30,7 +30,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch(`${import.meta.env.REACT_APP_API_URL}/admin/all-users`, {
+        const response = await fetch(`https://own-train-backend.vercel.app/admin/all-users`, {
           credentials: "include",
           method: "GET",
           headers: {

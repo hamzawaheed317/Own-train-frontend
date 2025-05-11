@@ -1,9 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import dotenv from "dotenv";
-dotenv.config(); // Load .env variables
+dotenv.config(); 
 import path from "path";
-// https://vite.dev/config/
 export default defineConfig({
   define: {
     "import.meta.env.REACT_APP_API_URL": JSON.stringify(
