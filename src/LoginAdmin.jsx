@@ -17,7 +17,7 @@ const LoginPage = () => {
     const checkAuth = async () => {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_URL}/admin/verify-auth`,
+          `${import.meta.env.REACT_APP_API_URL}/admin/verify-auth`,
           {
             credentials: "include",
           }
@@ -47,7 +47,7 @@ const LoginPage = () => {
 
     try {
       console.log(formData);
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/admin/login`, {
+      const response = await fetch(`${import.meta.env.REACT_APP_API_URL}/admin/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

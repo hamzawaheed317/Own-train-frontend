@@ -49,7 +49,7 @@ const TrainModel = () => {
   useEffect(() => {
     const fetchStoredFiles = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/admin/files`, {
+        const response = await fetch(`${import.meta.env.REACT_APP_API_URL}/admin/files`, {
           method: "GET",
           credentials: "include",
           headers: {
@@ -130,7 +130,7 @@ const TrainModel = () => {
       console.log("form data", formData);
       setIsTraining(true);
       // Send to backend
-      fetch(`${process.env.REACT_APP_API_URL}/admin/upload-multiple`, {
+      fetch(`${import.meta.env.REACT_APP_API_URL}/admin/upload-multiple`, {
         method: "POST",
         credentials: "include", // This sends cookies automatically
         body: formData,
@@ -205,7 +205,7 @@ const TrainModel = () => {
     console.log(fileIdsToDelete);
 
     // Make API call to delete files
-    const deleteResponse = await fetch(`${process.env.REACT_APP_API_URL}/admin/files`, {
+    const deleteResponse = await fetch(`${import.meta.env.REACT_APP_API_URL}/admin/files`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

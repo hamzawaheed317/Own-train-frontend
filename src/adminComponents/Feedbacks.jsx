@@ -71,7 +71,7 @@ const Feedbacks = () => {
         console.log("fetch feedbacks");
         setLoading(true);
         const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}/feedback/stats`,
+          `${import.meta.env.REACT_APP_API_URL}/feedback/stats`,
           {
             params: {
               email: userDetails.email || "",

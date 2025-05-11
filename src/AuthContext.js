@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
 
   const verifyAuth = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/admin/verify-auth`, {
+      const response = await fetch(`${import.meta.env.REACT_APP_API_URL}/admin/verify-auth`, {
         credentials: "include",
       });
 
