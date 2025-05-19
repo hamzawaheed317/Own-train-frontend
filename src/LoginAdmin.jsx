@@ -18,9 +18,6 @@ const LoginPage = () => {
       try {
         const response = await fetch(
           `https://own-train-backend.vercel.app/admin/verify-auth`,
-          {
-            credentials: "include",
-          }
         );
 
         if (response.ok) {
